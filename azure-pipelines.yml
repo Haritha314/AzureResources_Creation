@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  subscription: 062953e5-a9bc-4812-ad5c-ada7dacb9d82
+  subscription: Azure subscription 1(062953e5-a9bc-4812-ad5c-ada7dacb9d82)
 - task: TerraformTaskV2@2
   inputs:
     provider: 'azurerm'
