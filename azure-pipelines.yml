@@ -6,6 +6,16 @@ pool:
 
 variables:
   subscription: 062953e5-a9bc-4812-ad5c-ada7dacb9d82
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    commandOptions: 'out=tfplan'
+    backendServiceArm: 'Azure subscription 1(062953e5-a9bc-4812-ad5c-ada7dacb9d82)'
+    backendAzureRmResourceGroupName: 'cloud-shell-storage-eastus'
+    backendAzureRmStorageAccountName: 'cs210032000d05724df'
+    backendAzureRmContainerName: 'terraform'
+    backendAzureRmKey: 'tfstate'
   resourceGroup: resourcegroup-tfstate
   storageAccount: terraformtfstateskip
   container: tfstate
