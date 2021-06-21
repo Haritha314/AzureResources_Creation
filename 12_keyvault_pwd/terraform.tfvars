@@ -1,5 +1,5 @@
 resource_group_name    = "kv_terraform_rg"
 location               = "West Europe"
-keyvault_name          = "demokv01090"
+keyvault_name          = "harithasecretkey"
 secret_name            = "DatabasePassword"
 secret_value           = "@Aa123456789!"
