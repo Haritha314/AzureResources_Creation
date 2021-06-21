@@ -53,18 +53,3 @@ resource "azurerm_key_vault_secret" "db-pwd" {
   value        = var.secret_value
   key_vault_id = azurerm_key_vault.keyvault.id
 }
-
-# resource "azurerm_key_vault_access_policy" "policy" {
-#   key_vault_id = azurerm_key_vault.keyvault.id
-#
-#   tenant_id = data.azurerm_client_config.current.tenant_id
-#   object_id = "11111111-1111-1111-1111-111111111111" # SPN ID
-#
-#   key_permissions = [
-#     "get",
-#   ]
-#
-#   secret_permissions = [
-#     "get",
-#   ]
-# }
