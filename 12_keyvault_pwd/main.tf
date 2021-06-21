@@ -42,7 +42,11 @@ resource "azurerm_key_vault" "keyvault" {
   network_acls {
    default_action = "Deny"  
     bypass         = "AzureServices" 
-    ip_rules = ["10.139.0.0/16"]
+    # One or more IP Addresses, or CIDR Blocks to access this Key Vault.
+    ip_rules = ["10.139.0.0/16", "10.10.0.0/24","123.201.18.148" ]
+   
+    # One or more Subnet ID's to access this Key Vault.
+    virtual_network_subnet_ids = [10.10.0.0/25]
    }
 }
 
