@@ -22,9 +22,7 @@ resource "azurerm_key_vault" "keyvault" {
     object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
-      "get",
-      "list",
-      "set"
+      "get"
     ]
 
     secret_permissions = [
