@@ -23,6 +23,8 @@ resource "azurerm_key_vault" "keyvault" {
 
     key_permissions = [
       "get",
+      "list",
+      "set"
     ]
 
     secret_permissions = [
@@ -37,11 +39,11 @@ resource "azurerm_key_vault" "keyvault" {
     ]
   }
 
-  # network_acls {
-  #   default_action = "Deny" # "Allow" 
-  #   bypass         = "AzureServices" # "None"
-  #   ip_rules = ["50.50.50.50/24"]
-  # }
+  network_acls {
+   default_action = "Deny"  
+    bypass         = "AzureServices" 
+    ip_rules = ["10.139.0.0/16"]
+   }
 }
 
 resource "azurerm_key_vault_secret" "db-pwd" {
