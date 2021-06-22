@@ -1,4 +1,4 @@
-resource_group_name    = "rootnyc_terraform_rg"
+resource_group_name    = "rootnyc_coding_challenge"
 location               = "West Europe"
-keyvault_name          = "harithasecretkey"
+keyvault_name          = "harithasecret"
 
